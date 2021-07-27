@@ -1,0 +1,620 @@
+<!DOCTYPE HTML>
+  <html lang="">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.createjs.com/1.0.0/easeljs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+    <script src="hero.1.0.0.js"></script>
+    <script src="fusion.1.0.0.js"></script>
+    </head>
+  <body>
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+  html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+  }
+  body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  .hero-element {
+    position: absolute;
+  }
+  .fusion--player {
+    background-color: #fff;
+  }
+  
+  
+        #guid_c45a1d0b_350e_4831_b845_074739f2fb31 {
+  position: absolute;
+  width: 1726px;
+  height: 405px;
+  background-color: #fff;
+}
+#guid_04033793_5318_4754_b772_77408b135d37 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, -15, -229);
+}
+#guid_b44df707_a449_498e_963b_906e4803dd29 {
+  width: 1726px;
+  height: 405px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 15, 229);
+  background-color: #fff;
+  border: 2px solid #151313;
+}
+#guid_edfb4c12_86ff_4d65_9ef2_860e09439fe0 {
+  width: 421px;
+  height: 383px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 28, 240);
+}
+#guid_0014bdf1_1aa3_4f2b_b098_87be5499e24e {
+  width: 564px;
+  font-family: Segoe UI;
+  font-size: 40px;
+  color: #707070;
+  font-weight: 700;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 468, 249);
+}
+#guid_879ffefa_666c_46f9_b05a_37926d16d2f2 {
+  width: 36px;
+  height: 36px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1149, 255);
+  pointer-events: none;
+}
+#guid_852cb421_3529_43ec_98e0_54663bc89b41 {
+  width: 84px;
+  font-family: Segoe UI;
+  font-size: 33px;
+  color: #050404;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1492, 255);
+}
+#guid_eb11b9f0_bf13_47a4_805d_45b6d044534e {
+  width: 156px;
+  font-family: Segoe UI;
+  font-size: 25px;
+  color: #707070;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1423, 303);
+}
+#guid_a631a04b_4050_40ac_a6c9_fdd530473999 {
+  width: 104px;
+  height: 87px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1586, 249);
+  background-color: #3f39eb;
+  border: 1px solid #707070;
+  border-radius: 28px 28px 28px 28px;
+}
+#guid_495209bf_fb25_4e64_907a_ce8cf4badf4e {
+  width: 46px;
+  font-family: Segoe UI;
+  font-size: 33px;
+  color: #f5f5f5;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1617, 266);
+}
+#guid_1b32df94_a0b8_4110_8407_4b43680f97f2 {
+  width: 104px;
+  font-family: Segoe UI;
+  font-size: 23px;
+  color: #00159d;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 470, 303);
+}
+#guid_f034e494_8881_443e_8897_e3c142bffdde {
+  width: 147px;
+  font-family: Segoe UI;
+  font-size: 23px;
+  color: #00159d;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 594, 303);
+}
+#guid_ff940e57_3311_4744_94ba_226d7e4047fd {
+  width: 197px;
+  font-family: Segoe UI;
+  font-size: 23px;
+  color: #00159d;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 761, 303);
+}
+#guid_690c030b_e768_4dbc_8371_84a9c67c8408 {
+  width: 499px;
+  height: 85px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1191, 540);
+  background-color: #1859c5;
+  border: 1px solid #707070;
+}
+#guid_0aa2ec0b_9a0a_43f2_b5ed_7174f03d4d9d {
+  width: 340px;
+  font-family: Segoe UI;
+  font-size: 40px;
+  color: #e9e9e9;
+  font-weight: 700;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1239, 556);
+}
+#guid_1074b2b1_dcee_4bbf_a9d5_450a4e7d0bfd {
+  width: 34.875px;
+  height: 34.875px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1599.5625, 565.0625);
+  pointer-events: none;
+}
+#guid_484c66d4_3e0b_4610_b92f_373aef1bbfdb {
+  width: 530px;
+  font-family: Segoe UI;
+  font-size: 24px;
+  color: #d81414;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 470, 360);
+}
+#guid_9435b38a_489b_4cb6_96c7_a964757f495f {
+  width: 224px;
+  font-family: Sitka Display;
+  font-size: 30px;
+  color: #0f0b0b;
+  font-weight: 700;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 468, 363);
+}
+#guid_52656ca3_99fa_4646_bfe9_746a5a6a7b36 {
+  width: 24px;
+  height: 24px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 691, 410);
+  pointer-events: none;
+}
+#guid_bc866c4f_110f_41cc_a946_1d62a4aaa771 {
+  width: 326px;
+  font-family: Sitka Display;
+  font-size: 29px;
+  color: #4b4949;
+  font-weight: 700;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 468, 453);
+}
+#guid_109c06e5_a80d_4628_8aa3_a3b1a49fa7f2 {
+  width: 242px;
+  font-family: Sitka Display;
+  font-size: 30px;
+  color: #10963c;
+  font-weight: 700;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 465, 503);
+}
+#guid_36deb5f6_8101_4449_bdce_b40dca7151a9 {
+  width: 245px;
+  font-family: Sitka Display;
+  font-size: 33px;
+  color: #6a6666;
+  font-weight: 700;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1438, 394);
+}
+#guid_cbb6e09e_9dca_42c6_a634_1c91a7ee63c1 {
+  width: 60px;
+  font-family: Sitka Display;
+  font-size: 40px;
+  color: #030403;
+  font-weight: 700;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1544, 454);
+}
+#guid_d58aa1a7_e51d_4164_9206_8fad82f3d2da {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1588, 451.5);
+}
+#guid_75510761_db41_4ec7_989c_1b15e4ce0702 {
+  width: 0px;
+  height: 33px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 18, 1.5);
+  pointer-events: none;
+}
+#guid_dab28ef6_b584_48e6_b40d_b497cb567897 {
+  width: 18px;
+  height: 21px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 9, 7.5);
+  pointer-events: none;
+}
+#guid_a609856b_52f0_47fb_a988_d9459f6226ef {
+  width: 18px;
+  height: 21px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 9, 7.5);
+  pointer-events: none;
+}
+#guid_26f6b44a_dc92_4a27_b0e7_03d097b2b88f {
+  width: 64px;
+  font-family: Sitka Display;
+  font-size: 39px;
+  color: #030403;
+  font-weight: 700;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1619, 455);
+}
+#guid_e1b3b0c3_ea28_4a36_86e5_997ff9e2121b {
+  width: 320px;
+  font-family: Sitka Display;
+  font-size: 28px;
+  color: #090909;
+  font-weight: 700;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1349, 503);
+}
+#guid_e15b62de_22d5_4c53_b8dd_66c095a8f63a {
+  width: 36.001px;
+  height: 31.501px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 391.99999141693115, 255.24971055984497);
+  pointer-events: none;
+}
+#guid_d32c94f6_62ca_4962_84db_6e72edb69da2 {
+  width: 24px;
+  height: 24px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 721, 410);
+  pointer-events: none;
+}
+#guid_3c69c1b8_f114_465b_ae22_0fa8ddfe2423 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1029, 269.9977722167969);
+}
+#guid_d068e05d_3ed8_4612_9177_7b121b3b448f {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, -1029, -269.9977722167969);
+}
+#guid_8a648fb7_aa29_4b40_b2d1_dc01d252fb12 {
+  width: 18px;
+  height: 18px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1028.999966621399, 269.99776589870453);
+  pointer-events: none;
+}
+#guid_ea8c440c_03b2_4096_bddc_68a0172c4ba9 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, -1005, -269.9977722167969);
+}
+#guid_25b061e9_9a0d_4981_a3c9_6a593a7c57e4 {
+  width: 18px;
+  height: 18px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1028.999966621399, 269.99776589870453);
+  pointer-events: none;
+}
+#guid_ee35f389_efec_4078_a66d_1e077b286474 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, -981, -269.9977722167969);
+}
+#guid_f4d1fb91_4e1d_4240_840b_ca8633bddce6 {
+  width: 18px;
+  height: 18px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1028.999966621399, 269.99776589870453);
+  pointer-events: none;
+}
+#guid_7a5a5a31_41dd_4bef_9d84_6caa03507f10 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, -957, -269.9977722167969);
+}
+#guid_1f93e538_feec_4488_b29b_85ade437fc18 {
+  width: 18px;
+  height: 18px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1028.999966621399, 269.99776589870453);
+  pointer-events: none;
+}
+#guid_22a8453c_17ca_4b5a_a0a4_62c4cc1f6d60 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, -933, -269.9977722167969);
+}
+#guid_0ff454d8_3158_4882_940f_09b45503fd50 {
+  width: 18px;
+  height: 18px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1028.999966621399, 269.99776589870453);
+  pointer-events: none;
+}
+#guid_4e73e617_620f_4bf9_bf9b_22c1d3cd75c7 {
+  width: 10px;
+  height: 10px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 745, 316.5);
+  pointer-events: none;
+}
+#guid_6f5d5b16_ce8d_4d54_b85c_8bc562e533fc {
+  width: 10px;
+  height: 10px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 577, 316.5);
+  pointer-events: none;
+}
+#guid_86eaba57_5a24_420e_a900_a3a379abbb50 {
+  width: 10px;
+  height: 10px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 966, 317);
+  pointer-events: none;
+}
+#guid_92d529a4_6698_4fa9_8c81_026163067cf7 {
+  width: 113px;
+  font-family: Segoe UI;
+  font-size: 23px;
+  color: #00159d;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 987, 303);
+}
+
+      
+
+  </style>
+
+  
+
+        <!-- /////////////////////// -->
+        <!-- Player -->
+        <div class="wrapper" style="position: relative; width: 100%; height: 100%;">
+          <div id="player" class="fusion--player" style="width: 100%; height: 100%; ">
+            <div class="fusion--viewport">
+            
+            
+
+            
+            <div class="fusion--scene fusion--scene--default scene-guid_c45a1d0b_350e_4831_b845_074739f2fb31">
+              <div class="fusion--scene--content">
+                
+<div id="guid_c45a1d0b_350e_4831_b845_074739f2fb31" class="artboard scene" >
+<div id="guid_04033793_5318_4754_b772_77408b135d37" class="hero-element" >
+<div id="guid_b44df707_a449_498e_963b_906e4803dd29" class="hero-element" >
+</div>
+<img id="guid_edfb4c12_86ff_4d65_9ef2_860e09439fe0" class="hero-element" src="guid_edfb4c12_86ff_4d65_9ef2_860e09439fe0.jpg" >
+
+<div id="guid_0014bdf1_1aa3_4f2b_b098_87be5499e24e" class="hero-element" >Paradise Hotel & Suites Nyali 
+</div>
+<div id="guid_879ffefa_666c_46f9_b05a_37926d16d2f2" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: 0px; top: 0px;">
+        <path id="guid_879ffefa_666c_46f9_b05a_37926d16d2f2-path" d="M 7.313 15.750 L 1.688 15.750 C 0.756 15.750 0 16.506 0 17.438 L 0 34.313 C 0 35.244 0.756 36 1.688 36 L 7.313 36 C 8.244 36 9 35.244 9 34.313 L 9 17.438 C 9 16.506 8.244 15.750 7.313 15.750 Z M 4.500 33.188 C 3.568 33.188 2.813 32.432 2.813 31.500 C 2.813 30.568 3.568 29.813 4.500 29.813 C 5.432 29.813 6.188 30.568 6.188 31.500 C 6.188 32.432 5.432 33.188 4.500 33.188 Z M 27 5.727 C 27 8.709 25.174 10.382 24.660 12.375 L 31.813 12.375 C 34.161 12.375 35.989 14.326 36.000 16.460 C 36.006 17.721 35.469 19.079 34.633 19.919 L 34.625 19.927 C 35.317 21.568 35.205 23.867 33.971 25.515 C 34.581 27.335 33.966 29.572 32.819 30.771 C 33.121 32.008 32.977 33.061 32.387 33.909 C 30.952 35.971 27.395 36 24.387 36 L 24.187 36.000 C 20.792 35.999 18.013 34.763 15.781 33.769 C 14.659 33.270 13.192 32.652 12.078 32.632 C 11.619 32.623 11.250 32.248 11.250 31.788 L 11.250 16.757 C 11.250 16.532 11.340 16.317 11.500 16.158 C 14.286 13.406 15.483 10.492 17.766 8.205 C 18.807 7.162 19.186 5.587 19.552 4.064 C 19.864 2.763 20.518 0 21.938 0 C 23.625 0 27 0.563 27 5.727 Z" fill="#e6b20d"  stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+<div id="guid_852cb421_3529_43ec_98e0_54663bc89b41" class="hero-element" >Good
+</div>
+<div id="guid_eb11b9f0_bf13_47a4_805d_45b6d044534e" class="hero-element" >1,200 Reviews
+</div>
+<div id="guid_a631a04b_4050_40ac_a6c9_fdd530473999" class="hero-element" >
+</div>
+<div id="guid_495209bf_fb25_4e64_907a_ce8cf4badf4e" class="hero-element" >7.8
+</div>
+<div id="guid_1b32df94_a0b8_4110_8407_4b43680f97f2" class="hero-element" >Mombasa
+</div>
+<div id="guid_f034e494_8881_443e_8897_e3c142bffdde" class="hero-element" >Show On Map
+</div>
+<div id="guid_ff940e57_3311_4744_94ba_226d7e4047fd" class="hero-element" >1.3 Km from centre
+</div>
+<div id="guid_690c030b_e768_4dbc_8371_84a9c67c8408" class="hero-element" >
+</div>
+<div id="guid_0aa2ec0b_9a0a_43f2_b5ed_7174f03d4d9d" class="hero-element" >SEE AVAILABILITY
+</div>
+<div id="guid_1074b2b1_dcee_4bbf_a9d5_450a4e7d0bfd" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -0.5625px; top: -0.5625px;">
+        <path id="guid_1074b2b1_dcee_4bbf_a9d5_450a4e7d0bfd-path" d="M 18 0.563 C 27.633 0.563 35.438 8.367 35.438 18 C 35.438 27.633 27.633 35.438 18 35.438 C 8.367 35.438 0.563 27.633 0.563 18 C 0.563 8.367 8.367 0.563 18 0.563 Z M 26.009 16.805 L 16.481 7.277 C 15.820 6.616 14.752 6.616 14.098 7.277 L 12.902 8.473 C 12.241 9.134 12.241 10.202 12.902 10.856 L 20.046 18 L 12.902 25.144 C 12.241 25.805 12.241 26.873 12.902 27.527 L 14.098 28.723 C 14.759 29.384 15.827 29.384 16.481 28.723 L 26.009 19.195 C 26.670 18.534 26.670 17.466 26.009 16.805 Z" fill="#f6f2f2"  stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+<div id="guid_484c66d4_3e0b_4610_b92f_373aef1bbfdb" class="hero-element" >Booked 3 times for your dates in the last 24 hours
+</div>
+<div id="guid_9435b38a_489b_4cb6_96c7_a964757f495f" class="hero-element" ><br/>Standard Room - 
+</div>
+<div id="guid_52656ca3_99fa_4646_bfe9_746a5a6a7b36" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: 0px; top: 0px;">
+        <path id="guid_52656ca3_99fa_4646_bfe9_746a5a6a7b36-path" d="M 12 13.500 C 15.727 13.500 18.750 10.477 18.750 6.750 C 18.750 3.023 15.727 0 12 0 C 8.273 0 5.250 3.023 5.250 6.750 C 5.250 10.477 8.273 13.500 12 13.500 Z M 18 15.000 L 15.417 15.000 C 14.377 15.478 13.219 15.750 12 15.750 C 10.781 15.750 9.628 15.478 8.583 15.000 L 6 15.000 C 2.686 15.000 0 17.686 0 21 L 0 21.750 C 0 22.992 1.008 24 2.250 24 L 21.750 24 C 22.992 24 24 22.992 24 21.750 L 24 21 C 24 17.686 21.314 15.000 18 15.000 Z" fill="#000"  stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+<div id="guid_bc866c4f_110f_41cc_a946_1d62a4aaa771" class="hero-element" >Beds: 1 double or 2 singles
+</div>
+<div id="guid_109c06e5_a80d_4628_8aa3_a3b1a49fa7f2" class="hero-element" >Breakfast Included
+</div>
+<div id="guid_36deb5f6_8101_4449_bdce_b40dca7151a9" class="hero-element" >4 nights, 2 adults
+</div>
+<div id="guid_cbb6e09e_9dca_42c6_a634_1c91a7ee63c1" class="hero-element" >US 
+</div>
+<div id="guid_d58aa1a7_e51d_4164_9206_8fad82f3d2da" class="hero-element" >
+<div id="guid_75510761_db41_4ec7_989c_1b15e4ce0702" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -18px; top: -1.5px;">
+        <path id="guid_75510761_db41_4ec7_989c_1b15e4ce0702-path" d="M 18 1.500 L 18 34.500" fill="none" stroke="#000" stroke-width="3" style="pointer-events: all" />
+      </svg>
+    
+</div>
+<div id="guid_dab28ef6_b584_48e6_b40d_b497cb567897" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -9px; top: -7.5px;">
+        <path id="guid_dab28ef6_b584_48e6_b40d_b497cb567897-path" d="M 25.500 7.500 L 14.250 7.500 C 11.351 7.500 9.000 9.851 9.000 12.750 C 9.000 15.649 11.351 18 14.250 18 L 21.750 18 C 24.649 18.000 27 20.351 27 23.250 C 27 26.149 24.649 28.500 21.750 28.500 L 9 28.500" fill="none" stroke="#000" stroke-width="3" style="pointer-events: all" />
+      </svg>
+    
+</div>
+<div id="guid_a609856b_52f0_47fb_a988_d9459f6226ef" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -9px; top: -7.5px;">
+        <path id="guid_a609856b_52f0_47fb_a988_d9459f6226ef-path" d="M 25.500 7.500 L 14.250 7.500 C 11.351 7.500 9.000 9.851 9.000 12.750 C 9.000 15.649 11.351 18 14.250 18 L 21.750 18 C 24.649 18.000 27 20.351 27 23.250 C 27 26.149 24.649 28.500 21.750 28.500 L 9 28.500" fill="none" stroke="#000" stroke-width="3" style="pointer-events: all" />
+      </svg>
+    
+</div>
+</div>
+<div id="guid_26f6b44a_dc92_4a27_b0e7_03d097b2b88f" class="hero-element" >544
+</div>
+<div id="guid_e1b3b0c3_ea28_4a36_86e5_997ff9e2121b" class="hero-element" >Includes taxes and charges
+</div>
+<div id="guid_e15b62de_22d5_4c53_b8dd_66c095a8f63a" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: 0.0008630752563476562px; top: -2.2476658821105957px;">
+        <path id="guid_e15b62de_22d5_4c53_b8dd_66c095a8f63a-path" d="M 32.505 4.402 C 28.652 1.118 22.922 1.709 19.385 5.358 L 18 6.785 L 16.615 5.358 C 13.085 1.709 7.348 1.118 3.495 4.402 C -0.921 8.170 -1.153 14.934 2.798 19.020 L 16.404 33.068 C 17.283 33.975 18.710 33.975 19.589 33.068 L 33.195 19.020 C 37.153 14.934 36.921 8.170 32.505 4.402 Z" fill="#000" stroke="#fff" stroke-width="3" style="pointer-events: all" />
+      </svg>
+    
+</div>
+<div id="guid_d32c94f6_62ca_4962_84db_6e72edb69da2" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: 0px; top: 0px;">
+        <path id="guid_d32c94f6_62ca_4962_84db_6e72edb69da2-path" d="M 12 13.500 C 15.727 13.500 18.750 10.477 18.750 6.750 C 18.750 3.023 15.727 0 12 0 C 8.273 0 5.250 3.023 5.250 6.750 C 5.250 10.477 8.273 13.500 12 13.500 Z M 18 15.000 L 15.417 15.000 C 14.377 15.478 13.219 15.750 12 15.750 C 10.781 15.750 9.628 15.478 8.583 15.000 L 6 15.000 C 2.686 15.000 0 17.686 0 21 L 0 21.750 C 0 22.992 1.008 24 2.250 24 L 21.750 24 C 22.992 24 24 22.992 24 21.750 L 24 21 C 24 17.686 21.314 15.000 18 15.000 Z" fill="#000"  stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+<div id="guid_3c69c1b8_f114_465b_ae22_0fa8ddfe2423" class="hero-element" xd-repeat-grid="%7B%22width%22%3A115%2C%22height%22%3A18%2C%22cellWidth%22%3A18%2C%22cellHeight%22%3A18%2C%22numRows%22%3A1%2C%22numColumns%22%3A5%2C%22paddingX%22%3A6%2C%22paddingY%22%3A20%2C%22offsetX%22%3A1029%2C%22offsetY%22%3A269.9977722167969%7D" >
+<div id="guid_d068e05d_3ed8_4612_9177_7b121b3b448f" class="hero-element" >
+<div id="guid_8a648fb7_aa29_4b40_b2d1_dc01d252fb12" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -1.4413728713989258px; top: 0.0008913278579711914px;">
+        <path id="guid_8a648fb7_aa29_4b40_b2d1_dc01d252fb12-path" d="M 9.476 0.625 L 7.279 5.279 L 2.363 6.028 C 1.482 6.162 1.128 7.297 1.768 7.947 L 5.324 11.568 L 4.483 16.683 C 4.331 17.607 5.263 18.300 6.044 17.867 L 10.441 15.452 L 14.839 17.867 C 15.619 18.296 16.551 17.607 16.400 16.683 L 15.559 11.568 L 19.115 7.947 C 19.754 7.297 19.401 6.162 18.519 6.028 L 13.604 5.279 L 11.407 0.625 C 11.013 -0.204 9.873 -0.215 9.476 0.625 Z" fill="#dfa812"  stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+</div>
+<div id="guid_ea8c440c_03b2_4096_bddc_68a0172c4ba9" class="hero-element" >
+<div id="guid_25b061e9_9a0d_4981_a3c9_6a593a7c57e4" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -1.4413728713989258px; top: 0.0008913278579711914px;">
+        <path id="guid_25b061e9_9a0d_4981_a3c9_6a593a7c57e4-path" d="M 9.476 0.625 L 7.279 5.279 L 2.363 6.028 C 1.482 6.162 1.128 7.297 1.768 7.947 L 5.324 11.568 L 4.483 16.683 C 4.331 17.607 5.263 18.300 6.044 17.867 L 10.441 15.452 L 14.839 17.867 C 15.619 18.296 16.551 17.607 16.400 16.683 L 15.559 11.568 L 19.115 7.947 C 19.754 7.297 19.401 6.162 18.519 6.028 L 13.604 5.279 L 11.407 0.625 C 11.013 -0.204 9.873 -0.215 9.476 0.625 Z" fill="#dfa812"  stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+</div>
+<div id="guid_ee35f389_efec_4078_a66d_1e077b286474" class="hero-element" >
+<div id="guid_f4d1fb91_4e1d_4240_840b_ca8633bddce6" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -1.4413728713989258px; top: 0.0008913278579711914px;">
+        <path id="guid_f4d1fb91_4e1d_4240_840b_ca8633bddce6-path" d="M 9.476 0.625 L 7.279 5.279 L 2.363 6.028 C 1.482 6.162 1.128 7.297 1.768 7.947 L 5.324 11.568 L 4.483 16.683 C 4.331 17.607 5.263 18.300 6.044 17.867 L 10.441 15.452 L 14.839 17.867 C 15.619 18.296 16.551 17.607 16.400 16.683 L 15.559 11.568 L 19.115 7.947 C 19.754 7.297 19.401 6.162 18.519 6.028 L 13.604 5.279 L 11.407 0.625 C 11.013 -0.204 9.873 -0.215 9.476 0.625 Z" fill="#dfa812"  stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+</div>
+<div id="guid_7a5a5a31_41dd_4bef_9d84_6caa03507f10" class="hero-element" >
+<div id="guid_1f93e538_feec_4488_b29b_85ade437fc18" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -1.4413728713989258px; top: 0.0008913278579711914px;">
+        <path id="guid_1f93e538_feec_4488_b29b_85ade437fc18-path" d="M 9.476 0.625 L 7.279 5.279 L 2.363 6.028 C 1.482 6.162 1.128 7.297 1.768 7.947 L 5.324 11.568 L 4.483 16.683 C 4.331 17.607 5.263 18.300 6.044 17.867 L 10.441 15.452 L 14.839 17.867 C 15.619 18.296 16.551 17.607 16.400 16.683 L 15.559 11.568 L 19.115 7.947 C 19.754 7.297 19.401 6.162 18.519 6.028 L 13.604 5.279 L 11.407 0.625 C 11.013 -0.204 9.873 -0.215 9.476 0.625 Z" fill="#dfa812"  stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+</div>
+<div id="guid_22a8453c_17ca_4b5a_a0a4_62c4cc1f6d60" class="hero-element" >
+<div id="guid_0ff454d8_3158_4882_940f_09b45503fd50" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -1.4413728713989258px; top: 0.0008913278579711914px;">
+        <path id="guid_0ff454d8_3158_4882_940f_09b45503fd50-path" d="M 9.476 0.625 L 7.279 5.279 L 2.363 6.028 C 1.482 6.162 1.128 7.297 1.768 7.947 L 5.324 11.568 L 4.483 16.683 C 4.331 17.607 5.263 18.300 6.044 17.867 L 10.441 15.452 L 14.839 17.867 C 15.619 18.296 16.551 17.607 16.400 16.683 L 15.559 11.568 L 19.115 7.947 C 19.754 7.297 19.401 6.162 18.519 6.028 L 13.604 5.279 L 11.407 0.625 C 11.013 -0.204 9.873 -0.215 9.476 0.625 Z" fill="#dfa812"  stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+</div>
+</div>
+<div id="guid_4e73e617_620f_4bf9_bf9b_22c1d3cd75c7" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -0.5625px; top: -0.5625px;">
+        <path id="guid_4e73e617_620f_4bf9_bf9b_22c1d3cd75c7-path" d="M 5.563 0.563 C 2.801 0.563 0.563 2.801 0.563 5.563 C 0.563 8.324 2.801 10.563 5.563 10.563 C 8.324 10.563 10.563 8.324 10.563 5.563 C 10.563 2.801 8.324 0.563 5.563 0.563 Z M 7.175 5.563 C 7.175 6.452 6.452 7.175 5.563 7.175 C 4.673 7.175 3.950 6.452 3.950 5.563 C 3.950 4.673 4.673 3.950 5.563 3.950 C 6.452 3.950 7.175 4.673 7.175 5.563 Z" fill="#000"  stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+<div id="guid_6f5d5b16_ce8d_4d54_b85c_8bc562e533fc" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -0.5625px; top: -0.5625px;">
+        <path id="guid_6f5d5b16_ce8d_4d54_b85c_8bc562e533fc-path" d="M 5.563 0.563 C 2.801 0.563 0.563 2.801 0.563 5.563 C 0.563 8.324 2.801 10.563 5.563 10.563 C 8.324 10.563 10.563 8.324 10.563 5.563 C 10.563 2.801 8.324 0.563 5.563 0.563 Z M 7.175 5.563 C 7.175 6.452 6.452 7.175 5.563 7.175 C 4.673 7.175 3.950 6.452 3.950 5.563 C 3.950 4.673 4.673 3.950 5.563 3.950 C 6.452 3.950 7.175 4.673 7.175 5.563 Z" fill="#000"  stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+<div id="guid_86eaba57_5a24_420e_a900_a3a379abbb50" class="hero-element" >
+      <svg width="300" height="300" style="pointer-events: none; overflow: visible; position: absolute; left: -0.5625px; top: -0.5625px;">
+        <path id="guid_86eaba57_5a24_420e_a900_a3a379abbb50-path" d="M 5.563 0.563 C 2.801 0.563 0.563 2.801 0.563 5.563 C 0.563 8.324 2.801 10.563 5.563 10.563 C 8.324 10.563 10.563 8.324 10.563 5.563 C 10.563 2.801 8.324 0.563 5.563 0.563 Z M 7.175 5.563 C 7.175 6.452 6.452 7.175 5.563 7.175 C 4.673 7.175 3.950 6.452 3.950 5.563 C 3.950 4.673 4.673 3.950 5.563 3.950 C 6.452 3.950 7.175 4.673 7.175 5.563 Z" fill="#000"  stroke-width="1" style="pointer-events: all" />
+      </svg>
+    
+</div>
+<div id="guid_92d529a4_6698_4fa9_8c81_026163067cf7" class="hero-element" >Beachfront
+</div>
+</div>
+</div>
+              </div>
+            </div> 
+
+
+      
+
+            </div>
+          </div>
+        </div>
+
+      
+
+
+  <!-- Hero/Fusion Player -->
+  <script>
+    
+      document.addEventListener('DOMContentLoaded', function () {
+        window.player = new fusion.Player({
+          id: 'player',
+          // debug: true, 
+          scenes: [
+            
+            { 
+              id: 'guid_c45a1d0b_350e_4831_b845_074739f2fb31', 
+              type: 'flat', 
+              width: 1726, 
+              height: 405,
+              fit: true, 
+              center: true,
+              plugins: [
+                // {id: 'visualDebugger', options: {centerV: true}},
+              ]
+            },              
+      
+          ]
+        });
+        player.loadScene('guid_c45a1d0b_350e_4831_b845_074739f2fb31');      
+      });
+    
+  </script>
+
+  <!-- Hero Scenes -->
+  <script>
+    
+      //---
+      // Scene: guid_c45a1d0b_350e_4831_b845_074739f2fb31
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function() {
+          var log = console.log;
+          var player = window.player;
+          var scene = window.player.getScene('guid_c45a1d0b_350e_4831_b845_074739f2fb31');          
+    
+        }, 1);
+      }); // Scene end    
+    
+  </script>
+
+  <!-- Hero Timelines -->
+  <script>
+    
+    //---
+    // Scene: guid_c45a1d0b_350e_4831_b845_074739f2fb31
+    document.addEventListener('DOMContentLoaded', function () {
+      var player = window.player;
+      var scene = window.player.getScene('guid_c45a1d0b_350e_4831_b845_074739f2fb31');
+      var log = console.log;
+      var tl = gsap.timeline({paused: true});
+      scene.timeline = tl;
+      
+    });
+    
+  </script>
+
+  
+  
+</body>
+</html>
